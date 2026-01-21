@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,8 +59,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Animated Background */
@@ -78,14 +84,19 @@
             position: absolute;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0,255,136,0.1) 1px, transparent 1px);
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: gridMove 20s linear infinite;
         }
 
         @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
         }
 
         /* Particles */
@@ -114,12 +125,15 @@
                 transform: translateY(100vh) translateX(0);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.3;
             }
+
             90% {
                 opacity: 0.3;
             }
+
             100% {
                 transform: translateY(-100vh) translateX(100px);
                 opacity: 0;
@@ -229,9 +243,11 @@
             transition-delay: 0.2s;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 2rem;
             font-size: 2.5rem;
@@ -239,7 +255,8 @@
             display: inline-block;
         }
 
-        h1::after, h2::after {
+        h1::after,
+        h2::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -251,7 +268,8 @@
             transition: width 0.5s ease;
         }
 
-        section.visible h1::after, section.visible h2::after {
+        section.visible h1::after,
+        section.visible h2::after {
             width: 100px;
         }
 
@@ -270,8 +288,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .profile-img {
@@ -305,13 +330,25 @@
         }
 
         @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 40px rgba(0, 255, 136, 0.5); }
-            50% { box-shadow: 0 0 60px rgba(0, 255, 136, 0.8); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 60px rgba(0, 255, 136, 0.8);
+            }
         }
 
         .hero-title {
@@ -331,6 +368,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -349,6 +387,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -361,7 +400,9 @@
         }
 
         @keyframes blink {
-            50% { border-color: transparent; }
+            50% {
+                border-color: transparent;
+            }
         }
 
         /* Cards */
@@ -779,13 +820,23 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes zoomIn {
-            from { transform: scale(0.8); }
-            to { transform: scale(1); }
+            from {
+                transform: scale(0.8);
+            }
+
+            to {
+                transform: scale(1);
+            }
         }
 
         /* Certificate Card Styles */
@@ -808,16 +859,27 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            section { padding: 3rem 5%; }
-            nav ul { gap: 1rem; }
-            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 5%;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
             .certificate-modal-content {
                 max-width: 95%;
                 max-height: 95%;
             }
-            
+
             .certificate-modal-close {
                 top: 10px;
                 right: 20px;
@@ -826,6 +888,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loader" id="loader">
@@ -852,7 +915,8 @@
     <section id="hero">
         <div class="hero-content">
             <div class="profile-img">
-                <img src="myphoto.jpeg" alt="Your Name" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                <img src="myphoto.jpeg" alt="Your Name"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
             <h1 class="hero-title">Tanvir Almas Layes</h1>
             <p class="hero-subtitle"><span class="typing-text">Tech Enthusiast & Developer</span></p>
@@ -863,9 +927,11 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="card">
-            <p>Hi, I'm <strong>Tanvir Almas Layes</strong> – a tech enthusiast fueled by curiosity, innovation, and the thrill of solving complex problems. I specialize in <strong>software development, AI/ML with image processing, mobile and web app development, and data science</strong>, constantly exploring emerging technologies to craft intelligent, high-impact solutions.</p>
-<br>
-<p>I thrive on experimenting, learning, and pushing the limits of what's possible. From mastering the latest frameworks to optimizing systems and building smart applications, I see every challenge as a chance to innovate. For me, technology isn't just a career—it's a <strong>playground for creativity, discovery, and shaping the future</strong>.</p>
+            <p>Computer Science graduate with a strong academic background and a passion for continuous learning and
+                personal development. Highly motivated and dedicated, with a keen interest in acquiring new knowledge
+                and skills. I am enthusiastic about leveraging technology and problem-solving abilities to contribute
+                effectively. Avid reader, with a curiosity-driven mindset that enriches understanding and inspires
+                innovation.</p>
         </div>
     </section>
 
@@ -873,18 +939,22 @@
         <h2>Education</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>Bachelor of Science in Computer Science & Engineering</h3>
-                <p><strong>Daffodil International University</strong></p>
-                <p>2022 - 2026</p>
-                <p>CGPA: 3.8/4.0</p>
-                <p>Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems</p>
+                <h3>Bachelor of Science in Computer Science & Engineering (BSc)</h3>
+                <p><strong>Daffodil International University, Dhaka</strong></p>
+                <p>2021 – 2025</p>
+                <p>CGPA: 3.80</p>
             </div>
             <div class="card">
-                <h3>Higher Secondary Certificate (HSC) – Science</h3>
+                <h3>Higher Secondary Certificate (HSC)</h3>
                 <p><strong>Adamjee Cantonment College</strong></p>
-                <p>2018 - 2020</p>
-                <p>GPA: 5.0/5.0</p>
-                <p>Specialization: Mathematics, Physics</p>
+                <p>2018 – 2020</p>
+                <p>GPA: 5.00</p>
+            </div>
+            <div class="card">
+                <h3>Secondary School Certificate (SSC)</h3>
+                <p><strong>Adamjee Cantonment Public School</strong></p>
+                <p>2016 – 2018</p>
+                <p>GPA: 5.00</p>
             </div>
         </div>
     </section>
@@ -892,237 +962,204 @@
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
-            <!-- Include Font Awesome in your head -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+                .skill-category {
+                    margin-bottom: 2rem;
+                }
 
-<style>
-.skill-item {
-    margin-bottom: 20px;
-}
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
-.skill-name {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.skill-percentage {
-    color: var(--primary);
-    font-weight: bold;
-}
-.skill-bar {
-    background-color: rgba(0, 255, 136, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    height: 20px;
-}
-.skill-progress {
-    height: 100%;
-    border-radius: 10px;
-    animation: progressAnimation 2s forwards;
-}
-@keyframes progressAnimation {
-    from { width: 0; }
-}
-.fa-cuttlefish { color: #A8B9CC; } /* C */
-.fa-js-square { color: #F0DB4F; } /* JS */
-.fa-python { color: #306998; } /* Python */
-.fa-html5 { color: #E34F26; } /* HTML/CSS */
-.fa-aws { color: #FF9900; } /* AWS */
-.fa-php { color: #8892BE; } /* PHP */
-.fa-google-play { color: #02569B; } /* Flutter */
-.fa-robot { color: #4CAF50; } /* Machine Learning */
+                .skill-category h3 {
+                    color: var(--secondary);
+                    margin-bottom: 1rem;
+                    font-size: 1.2rem;
+                }
 
-/* Assign progress colors */
-.skill-progress.c { background-color: #A8B9CC; animation-delay: 0.2s; width: 85%; }
-.skill-progress.js { background-color: #F0DB4F; animation-delay: 0.4s; width: 90%; }
-.skill-progress.python { background-color: #306998; animation-delay: 0.6s; width: 85%; }
-.skill-progress.html { background-color: #E34F26; animation-delay: 0.8s; width: 88%; }
-.skill-progress.cloud { background-color: #FF9900; animation-delay: 1s; width: 80%; }
-.skill-progress.php { background-color: #8892BE; animation-delay: 1.2s; width: 75%; }
-.skill-progress.flutter { background-color: #02569B; animation-delay: 1.4s; width: 85%; }
-.skill-progress.ml { background-color: #4CAF50; animation-delay: 1.6s; width: 70%; }
-</style>
+                .skills-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1rem;
+                }
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-cuttlefish"></i> <strong>C Programming</strong></div>
-        <div class="skill-percentage">85%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress c" style="--skill-width: 85%"></div></div>
-</div>
+                .skill-item {
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 0.8rem 1.2rem;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 255, 136, 0.2);
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    transition: all 0.3s ease;
+                }
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-js-square"></i> <strong>JavaScript / TypeScript</strong></div>
-        <div class="skill-percentage">90%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress js" style="--skill-width: 90%"></div></div>
-</div>
+                .skill-item:hover {
+                    border-color: var(--primary);
+                    background: rgba(0, 255, 136, 0.1);
+                    transform: translateY(-3px);
+                }
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-python"></i> <strong>Python</strong></div>
-        <div class="skill-percentage">85%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress python" style="--skill-width: 85%"></div></div>
-</div>
+                .skill-item i {
+                    font-size: 1.2rem;
+                    width: 24px;
+                    text-align: center;
+                }
+            </style>
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-html5"></i> <strong>HTML / CSS</strong></div>
-        <div class="skill-percentage">88%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress html" style="--skill-width: 88%"></div></div>
-</div>
+            <div class="skill-category">
+                <h3>Programming & Frameworks</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML</div>
+                    <div class="skill-item"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i> CSS</div>
+                    <div class="skill-item"><i class="fa-brands fa-react" style="color: #61DAFB;"></i> React</div>
+                    <div class="skill-item"><i class="fa-solid fa-mobile-screen" style="color: #02569B;"></i> Flutter
+                    </div>
+                </div>
+            </div>
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-aws"></i> <strong>Cloud (AWS / Azure)</strong></div>
-        <div class="skill-percentage">80%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress cloud" style="--skill-width: 80%"></div></div>
-</div>
+            <div class="skill-category">
+                <h3>Backend Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-brands fa-python" style="color: #3776AB;"></i> Python</div>
+                    <div class="skill-item"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JavaScript</div>
+                </div>
+            </div>
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-php"></i> <strong>PHP</strong></div>
-        <div class="skill-percentage">75%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress php" style="--skill-width: 75%"></div></div>
-</div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-solid fa-fire" style="color: #FFCA28;"></i> Firebase</div>
+                    <div class="skill-item"><i class="fa-solid fa-database" style="color: #4479A1;"></i> MySQL</div>
+                </div>
+            </div>
 
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-brands fa-google-play"></i> <strong>Flutter</strong></div>
-        <div class="skill-percentage">85%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress flutter" style="--skill-width: 85%"></div></div>
-</div>
-
-<div class="skill-item">
-    <div class="skill-header">
-        <div class="skill-name"><i class="fa-solid fa-robot"></i> <strong>Machine Learning</strong></div>
-        <div class="skill-percentage">70%</div>
-    </div>
-    <div class="skill-bar"><div class="skill-progress ml" style="--skill-width: 70%"></div></div>
-</div>
-
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-solid fa-file-word" style="color: #2B579A;"></i> MS Word</div>
+                    <div class="skill-item"><i class="fa-solid fa-file-excel" style="color: #217346;"></i> Excel</div>
+                    <div class="skill-item"><i class="fa-solid fa-file-powerpoint" style="color: #D24726;"></i>
+                        PowerPoint</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        
+
         <div class="project-card">
-            <h3>🚀 E-Commerce Platform</h3>
-            <p>A full-stack e-commerce application built with React, Node.js, and MongoDB. Features include real-time inventory management, payment integration, and responsive design.</p>
-            <p><strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, Stripe API</p>
-            <a href="https://github.com/yourusername/ecommerce-project" class="project-link" target="_blank">View Project →</a>
+            <h3>🚀 FileVerse</h3>
+            <p>Full-stack website supporting file conversion, text summarization, and plagiarism detection.</p>
+            <p><strong>Tech Stack:</strong> Python, React, JavaScript</p>
         </div>
 
         <div class="project-card">
-            <h3>🤖 AI Chatbot Assistant</h3>
-            <p>An intelligent chatbot using Natural Language Processing to provide customer support. Integrated with multiple platforms and handles 10,000+ queries daily.</p>
-            <p><strong>Tech Stack:</strong> Python, TensorFlow, Flask, Docker</p>
-            <a href="https://github.com/yourusername/ai-chatbot" class="project-link" target="_blank">View Project →</a>
+            <h3>📱 Books & Reading Management System</h3>
+            <p>An Android application for managing reading history and book information.</p>
+            <p><strong>Tech Stack:</strong> Flutter, Firebase</p>
         </div>
 
         <div class="project-card">
-            <h3>📊 Real-Time Analytics Dashboard</h3>
-            <p>A data visualization platform that processes and displays real-time metrics from multiple sources. Features interactive charts and customizable widgets.</p>
-            <p><strong>Tech Stack:</strong> React, D3.js, WebSocket, Redis</p>
-            <a href="https://github.com/yourusername/analytics-dashboard" class="project-link" target="_blank">View Project →</a>
+            <h3>💻 TechDeshi</h3>
+            <p>Price comparison platform for technology products across online retailers.</p>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <h3>🎨 Portfolio Website & CV</h3>
+            <p>Responsive personal portfolio and CV website showcasing projects and skills.</p>
+            <p><strong>Tech Stack:</strong> HTML, CSS</p>
         </div>
     </section>
 
-<section id="certifications">
-  <h2>Certifications</h2>
-  <div class="card-grid">
-    <div class="card certificate-card" data-certificate="certificates/ds-math-incoursera.jpg">
-      <img src="certificates/ds-math-incoursera.jpg" alt="Data Science Math Skills" class="certificate-img">
-      <h3>Data Science Math Skills</h3>
-      <p>Google Coursera</p>
-      <p>Issued: 2025</p>
-    </div>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="card-grid">
+            <div class="card certificate-card" data-certificate="certificates/ds-math-incoursera.jpg">
+                <img src="certificates/ds-math-incoursera.jpg" alt="Data Science Math Skills" class="certificate-img">
+                <h3>Data Science Math Skills</h3>
+                <p>Google Coursera</p>
+                <p>Issued: 2025</p>
+            </div>
 
-    <div class="card certificate-card" data-certificate="certificates/google-gai-certificate.png">
-      <img src="certificates/google-gai-certificate.png" alt="Generate AI For Educators" class="certificate-img">
-      <h3>Generate AI For Educators Certificate</h3>
-      <p>Google</p>
-      <p>Issued: 2024</p>
-    </div>
+            <div class="card certificate-card" data-certificate="certificates/google-gai-certificate.png">
+                <img src="certificates/google-gai-certificate.png" alt="Generate AI For Educators"
+                    class="certificate-img">
+                <h3>Generate AI For Educators Certificate</h3>
+                <p>Google</p>
+                <p>Issued: 2024</p>
+            </div>
 
-    <div class="card certificate-card" data-certificate="certificates/msoffice-level-1.jpg">
-      <img src="certificates/msoffice-level-1.jpg" alt="Microsoft Copilot" class="certificate-img">
-      <h3>Craft effective prompts for Microsoft Copilot</h3>
-      <p>Microsoft</p>
-      <p>Issued: 2025</p>
-    </div>
+            <div class="card certificate-card" data-certificate="certificates/msoffice-level-1.jpg">
+                <img src="certificates/msoffice-level-1.jpg" alt="Microsoft Copilot" class="certificate-img">
+                <h3>Craft effective prompts for Microsoft Copilot</h3>
+                <p>Microsoft</p>
+                <p>Issued: 2025</p>
+            </div>
 
-    <div class="card certificate-card" data-certificate="certificates/iou-chatgpt.jpg">
-      <img src="certificates/iou-chatgpt.jpg" alt="ChatGPT Introduction" class="certificate-img">
-      <h3>Chatgpt Introduction For Teaching & Learning</h3>
-      <p>International Online University</p>
-      <p>Issued: 2024</p>
-    </div>
-  </div>
-</section>
-
-<!-- Certificate Modal -->
-<div id="certificateModal" class="certificate-modal">
-  <div class="certificate-modal-content">
-    <span class="certificate-modal-close">&times;</span>
-    <img id="certificateModalImg" src="" alt="Certificate">
-  </div>
-</div>
-
-<section id="publications">
-    <h2>Publications</h2>
-    <div class="card-grid">
-        <div class="card">
-            <h3>A Comprehensive Dataset of Rice Leaf Images for Disease Detection Using Machine Learning</h3>
-            <p><strong>Data in Brief (Elsevier)</strong></p>
-            <p>2025</p>
-            <p>Published dataset providing rice leaf images for machine learning-based disease detection.</p>
-            <a href="https://doi.org/10.1016/j.dib.2025.111977" target="_blank" class="pub-link">🔗 View DOI</a>
+            <div class="card certificate-card" data-certificate="certificates/iou-chatgpt.jpg">
+                <img src="certificates/iou-chatgpt.jpg" alt="ChatGPT Introduction" class="certificate-img">
+                <h3>Chatgpt Introduction For Teaching & Learning</h3>
+                <p>International Online University</p>
+                <p>Issued: 2024</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Rice Leaf Disease and Pest Dataset Overview</h3>
-            <p><strong>Mendeley Data</strong></p>
-            <p>2024</p>
-            <p>Open-access dataset containing 2,769 rice leaf images, augmented to 19,128 across multiple disease and pest categories.</p>
-            <a href="https://data.mendeley.com/datasets/vwv3nry3wr/1" target="_blank" class="pub-link">📂 View Dataset</a>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="certificate-modal-content">
+            <span class="certificate-modal-close">&times;</span>
+            <img id="certificateModalImg" src="" alt="Certificate">
         </div>
     </div>
-</section>
 
-<section id="interests">
-    <h2>Hobbies & Interests</h2>
-    <div class="card-grid">
-        <div class="card">
-            <h3>🤖 Computer Vision</h3>
-            <p>Specializing in AI and machine learning techniques to analyze and interpret visual data, developing practical solutions for real-world applications.</p>
+    <section id="publications">
+        <h2>Publications</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>A Comprehensive Dataset of Rice Leaf Images for Disease Detection Using Machine Learning</h3>
+                <p><strong>Data in Brief (Elsevier)</strong></p>
+                <p>2025</p>
+                <p>Published dataset providing rice leaf images for machine learning-based disease detection.</p>
+                <a href="https://doi.org/10.1016/j.dib.2025.111977" target="_blank" class="pub-link">🔗 View DOI</a>
+            </div>
+            <div class="card">
+                <h3>Rice Leaf Disease and Pest Dataset Overview</h3>
+                <p><strong>Mendeley Data</strong></p>
+                <p>2024</p>
+                <p>Open-access dataset containing 2,769 rice leaf images, augmented to 19,128 across multiple disease
+                    and pest categories.</p>
+                <a href="https://data.mendeley.com/datasets/vwv3nry3wr/1" target="_blank" class="pub-link">📂 View
+                    Dataset</a>
+            </div>
         </div>
-        <div class="card">
-            <h3>📱 App Development</h3>
-            <p>Designing and building mobile and web applications with a focus on usability, performance, and delivering engaging user experiences.</p>
+    </section>
+
+    <section id="interests">
+        <h2>Hobbies & Interests</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>🤖 Computer Vision</h3>
+                <p>Specializing in AI and machine learning techniques to analyze and interpret visual data, developing
+                    practical solutions for real-world applications.</p>
+            </div>
+            <div class="card">
+                <h3>📱 App Development</h3>
+                <p>Designing and building mobile and web applications with a focus on usability, performance, and
+                    delivering engaging user experiences.</p>
+            </div>
+            <div class="card">
+                <h3>🎮 Gaming</h3>
+                <p>Exploring gaming to understand mechanics, strategies, and emerging trends, while also analyzing
+                    gameplay for insights into design and user experience.</p>
+            </div>
+            <div class="card">
+                <h3>📚 Reading & Literature</h3>
+                <p>Engaging with books on politics, history, religion, and economic systems, alongside thrilling
+                    literature, to enhance knowledge, critical thinking, and perspective.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>🎮 Gaming</h3>
-            <p>Exploring gaming to understand mechanics, strategies, and emerging trends, while also analyzing gameplay for insights into design and user experience.</p>
-        </div>
-        <div class="card">
-            <h3>📚 Reading & Literature</h3>
-            <p>Engaging with books on politics, history, religion, and economic systems, alongside thrilling literature, to enhance knowledge, critical thinking, and perspective.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
@@ -1146,36 +1183,44 @@
 
         <div class="social-links">
             <a href="https://github.com/layes26" class="social-link" target="_blank" title="GitHub">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
             </a>
-            <a href="https://www.linkedin.com/in/tanvir-almas-layes-5862b0310/" class="social-link" target="_blank" title="LinkedIn">
-                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <a href="https://www.linkedin.com/in/tanvir-almas-layes-5862b0310/" class="social-link" target="_blank"
+                title="LinkedIn">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
             </a>
             <!-- Facebook -->
-<a href="https://www.facebook.com/tanvir.almas.layes" class="social-link" target="_blank" title="Facebook">
-    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22.675 0h-21.35C.596 0 0 .596 0 1.333v21.333C0 23.404.596 24 1.325 24h11.49v-9.294H9.692v-3.622h3.123V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.098 2.795.142v3.24h-1.918c-1.507 0-1.799.716-1.799 1.765v2.316h3.595l-.468 3.622h-3.127V24h6.127C23.404 24 24 23.404 24 22.667V1.333C24 .596 23.404 0 22.675 0z"/>
-    </svg>
-</a>
+            <a href="https://www.facebook.com/tanvir.almas.layes" class="social-link" target="_blank" title="Facebook">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M22.675 0h-21.35C.596 0 0 .596 0 1.333v21.333C0 23.404.596 24 1.325 24h11.49v-9.294H9.692v-3.622h3.123V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.098 2.795.142v3.24h-1.918c-1.507 0-1.799.716-1.799 1.765v2.316h3.595l-.468 3.622h-3.127V24h6.127C23.404 24 24 23.404 24 22.667V1.333C24 .596 23.404 0 22.675 0z" />
+                </svg>
+            </a>
 
-<!-- Gmail -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanvir0426@gmail.com" 
-   class="social-link" target="_blank" title="Send Email">
-    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 
+            <!-- Gmail -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanvir0426@gmail.com" class="social-link"
+                target="_blank" title="Send Email">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 
                  1.1.9 2 2 2h16c1.1 0 2-.9 
                  2-2V6c0-1.1-.9-2-2-2zm0 
-                 4l-8 5-8-5V6l8 5 8-5v2z"/>
-    </svg>
-</a>
+                 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+            </a>
 
         </div>
     </section>
 
     <script>
         // Loading screen
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
                 document.getElementById('loader').classList.add('hidden');
             }, 1000);
         });
@@ -1184,7 +1229,7 @@
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
@@ -1194,11 +1239,11 @@
                 particlesContainer.appendChild(particle);
             }
         }
-        
+
         createParticles();
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1213,7 +1258,7 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
                     window.scrollTo({
@@ -1230,11 +1275,11 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
+
                     // Trigger skill bar animation when skills section is visible
                     if (entry.target.id === 'skills') {
                         const skillItems = entry.target.querySelectorAll('.skill-item');
@@ -1267,7 +1312,7 @@
 
         function type() {
             const currentText = texts[textIndex];
-            
+
             if (isDeleting) {
                 typingText.textContent = currentText.substring(0, charIndex - 1);
                 charIndex--;
@@ -1289,30 +1334,30 @@
         type();
 
         // Certificate Modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const modal = document.getElementById('certificateModal');
             const modalImg = document.getElementById('certificateModalImg');
             const closeBtn = document.querySelector('.certificate-modal-close');
-            
+
             // Get all certificate cards
             const certificateCards = document.querySelectorAll('.certificate-card');
-            
+
             // Add click event to each certificate card
             certificateCards.forEach(card => {
-                card.addEventListener('click', function() {
+                card.addEventListener('click', function () {
                     const certificateSrc = this.getAttribute('data-certificate');
                     modalImg.src = certificateSrc;
                     modal.classList.add('active');
                 });
             });
-            
+
             // Close modal when clicking on the close button
-            closeBtn.addEventListener('click', function() {
+            closeBtn.addEventListener('click', function () {
                 modal.classList.remove('active');
             });
-            
+
             // Close modal when clicking outside the image
-            modal.addEventListener('click', function(e) {
+            modal.addEventListener('click', function (e) {
                 if (e.target === modal) {
                     modal.classList.remove('active');
                 }
@@ -1320,4 +1365,5 @@
         });
     </script>
 </body>
+
 </html>
